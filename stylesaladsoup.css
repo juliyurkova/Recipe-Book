@@ -1,0 +1,323 @@
+/* Определяем блочную модель */
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    /*значения свойства ширины и высоты, а также минимальной и максимальной ширины */
+    /*и минимальной и максимальной высоты включают в себя содержание элемента, границы и внутренние отступы*/
+    box-sizing: border-box;
+}
+
+/* Убираем стандартное подчёркивание у ссылок */
+a {
+    text-decoration: none;
+}
+
+/* Устанавливаем минимальный размер экрана и добавляем фоновое изображение */
+body {
+    min-height: 100vh; /*устанавливает минимальную высоту элемента*/
+    background: #fffded;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    color: #333;
+
+    /*Для footer*/
+    display: flex; /*флексбокс сетка*/
+    flex-direction: column; /*направление главной оси*/
+    justify-content: flex-end; /*элементы в конце контейнера*/
+}
+
+/* Стилизуем шапку сайта */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /*background-image: url("шапка2.jpg");*/
+    background: rgb(76, 94, 60);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    z-index: 10;
+}
+/* Стилизуем логотип */
+.logo {
+    position: relative;
+    text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+    font-size: 28px; /* Устанавливаем размер шрифта */
+    font-weight: 900; /* Устанавливаем жирное начертание шрифта */
+    color: #ccd5ae; /* Устанавливаем цвет логотипа */
+}
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ccd5ae;
+}
+.mobile-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ccd5ae;
+}
+.grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+   /* Добавляем стилизацию ссылок в меню при наведении курсора */
+.menu a:hover {
+    color: #283618; /* Задаём изменение цвета ссылок при наведении курсора */
+}
+.mobile-menu a:hover {
+    color: #283618; /* Задаём изменение цвета ссылок при наведении курсора */
+}
+.menu a:active{
+    color: #1a240f;
+}
+.mobile-menu a:active{
+    color: #1a240f;
+}
+/* Стили для мобильной версии */
+.mobile {
+    display: none;
+}
+.mobile header {
+    position: relative;
+}
+.menu-toggle {
+    display: none;
+}
+.menu-icon, .close-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccd5ae;
+}
+.menu-icon{
+    padding-left: 100px;
+}
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.mobile-menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+#menu-toggle:checked + .menu-icon + .mobile-menu {
+    display: flex;
+}
+.close-icon {
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.recipe-card {
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #ccd5ae;
+
+}
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.recipe-card h2 {
+    text-align: center;
+    padding: 10px 0;
+}
+.recipe-card:hover {
+    /*transform: scale(1.05);*/
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*ФУТЕР*/
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background: #6b705c;
+    color: #fefae0;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    justify-items: center;
+}
+/* Адаптивность */
+@media (max-width: 2560px) and (min-width: 1001px) {
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1000px) and (min-width: 769px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) and (min-width: 320px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+/* Социальные кнопки */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.social-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: background 0.4s ease;
+    cursor: pointer;
+}
+/* Псевдоэлемент для анимации градиента */
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #283618, #606c38);
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+.social-btn:hover::before {
+    top: 0;
+}
+.social-btn ion-icon {
+    position: relative;
+    z-index: 1;
+}
+/* Индивидуальные стили для каждой соцсети */
+.social-btn.youtube {
+    background: #ff0000;
+}
+.social-btn.vk {
+    background: #0077FF;
+}
+.social-btn.pinterest {
+    background: #BD081C;
+}
+.social-btn:hover {
+    color: #fefae0;
+    transition: color 0.2s;
+}
+/* Меню в футере */
+.menu_footer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu_footer li {
+    list-style: none;
+}
+.menu_footer li a {
+    font-size: 1.2em;
+    color: #fefae0;
+    opacity: 0.75;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+.menu_footer li a:hover {
+    opacity: 1;
+}
+/* Текст футера */
+footer p,
+address {
+    color: #fefae0;
+    text-align: center;
+    margin-top: 10px;
+}

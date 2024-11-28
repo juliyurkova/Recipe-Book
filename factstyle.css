@@ -1,0 +1,254 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fefae0;
+    color: #3a3a3a;
+    overflow-x: hidden;
+}
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    margin: 0;
+}
+p {
+    line-height: 1.8;
+    margin: 0;
+}
+/* Хедер */
+header {
+    height: 100vh;
+    background: url('https://i.pinimg.com/originals/32/aa/65/32aa656406cf4852c8908bd4ed92e2ae.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: #fefae0;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 94, 60, 0.7);
+    z-index: 0;
+}
+header h1 {
+    font-size: 4rem;
+    z-index: 1;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
+    animation: fadeInDown 2s ease-in-out;
+}
+/* Анимация */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Секция фактов */
+.facts {
+    padding: 60px 20px;
+    background-color: #e9edc9;
+    text-align: center;
+}
+.facts h2 {
+    font-size: 2.8rem;
+    color: #6b705c;
+    margin-bottom: 20px;
+}
+.facts .fact {
+    font-size: 1.2rem;
+    color: #3a3a3a;
+    background: #fdfdf8;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-left: 5px solid #d4a373;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.facts hr {
+    border: none;
+    border-top: 1px solid #ccd5ae;
+    margin: 40px auto;
+    width: 60%;
+}
+/* Параллакс */
+.parallax-section {
+    height: 60vh;
+    background: url('https://i.pinimg.com/originals/1a/c9/35/1ac93546e5532f444b084b8586baaa4a.jpg') no-repeat center center/cover;
+    position: relative;
+}
+.parallax-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 94, 60, 0.6);
+}
+.parallax-section h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fefae0;
+    font-size: 3rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    text-align: center;
+}
+/* Секция статей */
+.articles {
+    background: #faedcd;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+.article {
+    background: #fdfdf8;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 320px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.article img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.article h3 {
+    font-size: 1.5rem;
+    color: #6b705c;
+    padding: 20px;
+}
+.article p {
+    font-size: 1rem;
+    color: #3a3a3a;
+    padding: 0 20px 20px;
+}
+/*ФУТЕР*/
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background: #6b705c;
+    color: #fefae0;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    justify-items: center;
+}
+/* Адаптивность */
+@media (max-width: 2560px) and (min-width: 1001px) {
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1000px) and (min-width: 769px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) and (min-width: 320px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+/* Социальные кнопки */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.social-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: background 0.4s ease;
+    cursor: pointer;
+}
+/* Псевдоэлемент для анимации градиента */
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #283618, #606c38);
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+.social-btn:hover::before {
+    top: 0;
+}
+.social-btn ion-icon {
+    position: relative;
+    z-index: 1;
+}
+/* Индивидуальные стили для каждой соцсети */
+.social-btn.youtube {
+    background: #ff0000;
+}
+.social-btn.vk {
+    background: #0077FF;
+}
+.social-btn.pinterest {
+    background: #BD081C;
+}
+.social-btn:hover {
+    color: #fefae0;
+    transition: color 0.2s;
+}
+/* Меню в футере */
+.menu_footer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu_footer li {
+    list-style: none;
+}
+.menu_footer li a {
+    font-size: 1.2em;
+    color: #fefae0;
+    opacity: 0.75;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+.menu_footer li a:hover {
+    opacity: 1;
+}
+/* Текст футера */
+footer p,
+address {
+    color: #fefae0;
+    text-align: center;
+    margin-top: 10px;
+}

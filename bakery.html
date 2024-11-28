@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Устанавливаем кодировку символов -->
+    <meta charset="UTF-8" />
+    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Прописываем заголовок страницы -->
+    <title>Выпечка</title>
+    <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Подключаем файл со стилями -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
+  </head>
+<body>
+    <!-- Десктоп версия -->
+    <div class="desktop">
+        <header>
+            <a class="logo" href="index.html">Book Recipe</a>
+            <nav class="menu">
+                <a href="soup.html">Супы</a>
+                <a href="mainmeal.html">Горячее</a>
+                <a href="salad.html">Салаты</a>
+                <a href="bakery.html">Выпечка</a>
+                <a href="dessert.html">Десерты</a>
+                <a href="log.html">Вход</a>
+            </nav>
+        </header>
+    </div>
+    <!-- Мобильная версия -->
+    <div class="mobile">
+        <header>
+            <div class="logo">Book Recipe</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="mobile-menu">
+                <a href="soup.html">Супы</a>
+                <a href="mainmeal.html">Горячее</a>
+                <a href="salad.html">Салаты</a>
+                <a href="bakery.html">Выпечка</a>
+                <a href="dessert.html">Десерты</a>
+                <a href="log.html">Регистрация</a>
+                <label for="menu-toggle" class="close-icon">&times;</label>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="bakery-section">
+            <h2>Популярные рецепты</h2>
+            <div class="bakery-recipe-grid fade-in">
+                <div class="bakery-recipe">
+                    <img src="https://cdn.culture.ru/images/0aaa4b60-28b5-5705-a371-af0c3fc406a7" alt="Рецепт хлеба">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Домашний хлеб</h3>
+                        <p class="bakery-recipe-description">Пышный домашний хлеб с золотистой корочкой.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>500 г муки</li>
+                                <li>300 мл воды</li>
+                                <li>10 г сухих дрожжей</li>
+                                <li>1 ч.л. соли</li>
+                                <li>1 ст.л. сахара</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Смешайте все ингредиенты и замесите тесто.</li>
+                                <li>Дайте тесту подняться в течение 1 часа.</li>
+                                <li>Выложите тесто в форму и выпекайте 40 минут при 180°C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="bakery-recipe">
+                    <img src="https://artnow.ru/img/1235000/1235905.jpg" alt="Круассаны">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Круассаны</h3>
+                        <p class="bakery-recipe-description">Французские круассаны с хрустящей корочкой.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>500 г слоёного теста</li>
+                                <li>100 г масла</li>
+                                <li>1 яйцо для смазки</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Раскатайте тесто и нарежьте на треугольники.</li>
+                                <li>Сверните каждый треугольник в форму круассана.</li>
+                                <li>Смажьте яйцом и выпекайте 20 минут при 200°C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="bakery-recipe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Untitled_%28Birthday_Still_Life%29._296_%28NBY_420082%29.jpg" alt="Шоколадный торт">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Шоколадный торт</h3>
+                        <p class="bakery-recipe-description">Сочный торт с насыщенным шоколадным вкусом.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>200 г муки</li>
+                                <li>150 г сахара</li>
+                                <li>50 г какао</li>
+                                <li>3 яйца</li>
+                                <li>100 мл молока</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Смешайте муку, сахар, какао и яйца.</li>
+                                <li>Добавьте молоко и хорошо перемешайте.</li>
+                                <li>Выпекайте 30 минут при 180°C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="bakery-recipe">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65631c2f09164b530f12611c_656329b4f6684a4e5aac8ba3/scale_1200" alt="Яблочный штрудель">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Яблочный штрудель</h3>
+                        <p class="bakery-recipe-description">Традиционный десерт с нежной начинкой из яблок и корицы.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>250 г муки</li>
+                                <li>100 мл воды</li>
+                                <li>50 мл растительного масла</li>
+                                <li>Щепотка соли</li>
+                                <li>4 яблока</li>
+                                <li>50 г сахара</li>
+                                <li>1 ч.л. корицы</li>
+                                <li>50 г изюма</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Замесите тесто из муки, воды, масла и соли. Оставьте на 30 минут.</li>
+                                <li>Яблоки очистите и нарежьте, смешайте с сахаром, корицей и изюмом.</li>
+                                <li>Раскатайте тесто, выложите начинку и сверните рулетом.</li>
+                                <li>Выпекайте 35 минут при 180°C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>   
+                <div class="bakery-recipe">
+                    <img src="https://avatars.mds.yandex.net/i?id=7d63e26f29f20892a1b8b63236aebe9b_l-5233571-images-thumbs&n=13" alt="Блины">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Тонкие блины</h3>
+                        <p class="bakery-recipe-description">Лёгкие и нежные блины на молоке.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>500 мл молока</li>
+                                <li>200 г муки</li>
+                                <li>2 яйца</li>
+                                <li>1 ст.л. сахара</li>
+                                <li>Щепотка соли</li>
+                                <li>50 мл растительного масла</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Смешайте яйца, сахар и соль.</li>
+                                <li>Добавьте молоко и постепенно всыпьте муку.</li>
+                                <li>Добавьте масло, перемешайте.</li>
+                                <li>Жарьте блины на разогретой сковороде до золотистого цвета.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>   
+                <div class="bakery-recipe">
+                    <img src="https://i.pinimg.com/originals/46/1b/7a/461b7a0e73cc39076d82af359b03b19f.jpg" alt="Пончики">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Пончики</h3>
+                        <p class="bakery-recipe-description">Пышные пончики с сахарной пудрой.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>500 г муки</li>
+                                <li>200 мл молока</li>
+                                <li>50 г сахара</li>
+                                <li>2 яйца</li>
+                                <li>10 г сухих дрожжей</li>
+                                <li>50 г масла</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Смешайте тёплое молоко, дрожжи и сахар, дайте постоять 10 минут.</li>
+                                <li>Добавьте яйца, масло и муку. Замесите тесто.</li>
+                                <li>Дайте тесту подняться, затем сформируйте пончики.</li>
+                                <li>Обжарьте во фритюре до золотистого цвета.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>   
+                <div class="bakery-recipe">
+                    <img src="https://klezcalifornia.org/wp-content/uploads/2019/08/IMG_3949.jpg" alt="Бейглы">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Бейглы</h3>
+                        <p class="bakery-recipe-description">Классические бейглы с плотной текстурой.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>500 г муки</li>
+                                <li>250 мл воды</li>
+                                <li>10 г сухих дрожжей</li>
+                                <li>1 ст.л. сахара</li>
+                                <li>1 ч.л. соли</li>
+                                <li>1 яйцо для смазки</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Замесите тесто и дайте ему подняться 1 час.</li>
+                                <li>Сформируйте кольца, отварите их 1 минуту в кипящей воде.</li>
+                                <li>Смажьте яйцом и выпекайте 20 минут при 200°C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>  
+                <div class="bakery-recipe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Circle_of_Georg_Flegel_Still_life_with_waffles.jpg" alt="Вафли">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Вафли</h3>
+                        <p class="bakery-recipe-description">Хрустящие домашние вафли.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>250 г муки</li>
+                                <li>100 г сахара</li>
+                                <li>2 яйца</li>
+                                <li>100 мл молока</li>
+                                <li>50 г масла</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Смешайте яйца, сахар и масло.</li>
+                                <li>Добавьте муку и молоко, замесите тесто.</li>
+                                <li>Выпекайте в вафельнице до золотистого цвета.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>   
+                <div class="bakery-recipe">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65afac4642dbef2a3ed2d702_65afaca9b1be341b2d1bb3c5/scale_1200" alt="Тарт с ягодами">
+                    <div class="bakery-recipe-content">
+                        <h3 class="bakery-recipe-title">Тарт с ягодами</h3>
+                        <p class="bakery-recipe-description">Нежный песочный тарт с ягодной начинкой.</p>
+                        <div class="bakery-recipe-details">
+                            <strong>Ингредиенты:</strong>
+                            <ul>
+                                <li>200 г муки</li>
+                                <li>100 г масла</li>
+                                <li>50 г сахара</li>
+                                <li>1 яйцо</li>
+                                <li>200 г ягод</li>
+                                <li>50 г сахара для начинки</li>
+                            </ul>
+                            <strong>Шаги:</strong>
+                            <ol>
+                                <li>Замесите песочное тесто из муки, масла, сахара и яйца.</li>
+                                <li>Выложите тесто в форму, добавьте ягоды, смешанные с сахаром.</li>
+                                <li>Выпекайте 25 минут при 180°C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div id="contents" class="social-buttons">
+            <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
+                <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://vk.com/jullii_a" class="social-btn vk">
+                <ion-icon name="logo-vk"></ion-icon>
+            </a>
+        </div>
+        <ul class="menu_footer">
+            <li><a href="index.html">Домой</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <address>Волоколамское шоссе, д. 17, офис 392</address>
+        <p>©2024 Book Recipe | All Rights Reserved</p>
+      </footer>
+      <!--Готовые иконки из библиотеки ionicons-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script>
+        // Получаем все ссылки внутри контейнера
+        const links = document.querySelectorAll('#contents a');
+        // Добавляем обработчик событий на каждую ссылку
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Останавливаем переход по ссылке
+    
+                const userConfirmed = confirm("Вы точно хотите покинуть страницу?");
+                if (userConfirmed) {
+                    // Если пользователь подтвердил, переходим по ссылке
+                    window.location.href = this.href;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

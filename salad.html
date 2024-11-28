@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Устанавливаем кодировку символов -->
+    <meta charset="UTF-8" />
+    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Прописываем заголовок страницы -->
+    <title>Салаты</title>
+    <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Подключаем файл со стилями -->
+    <link rel="stylesheet" href="stylesaladsoup.css" />
+    <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
+  </head>
+<body>
+    <!-- Десктоп версия -->
+    <div class="desktop">
+        <header>
+            <a class="logo" href="index.html">Book Recipe</a>
+            <nav class="menu">
+                <a href="soup.html">Супы</a>
+                <a href="mainmeal.html">Горячее</a>
+                <a href="salad.html">Салаты</a>
+                <a href="bakery.html">Выпечка</a>
+                <a href="dessert.html">Десерты</a>
+                <a href="log.html">Вход</a>
+            </nav>
+        </header>
+    </div>
+    <!-- Мобильная версия -->
+    <div class="mobile">
+        <header>
+            <div class="logo">Book Recipe</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="mobile-menu">
+                <a href="soup.html">Супы</a>
+                <a href="mainmeal.html">Горячее</a>
+                <a href="salad.html">Салаты</a>
+                <a href="bakery.html">Выпечка</a>
+                <a href="dessert.html">Десерты</a>
+                <a href="log.html">Регистрация</a>
+                <label for="menu-toggle" class="close-icon">&times;</label>
+            </nav>
+        </header>
+    </div>
+
+    <main class="fade-in">
+            <div class="recipe-card" onclick="openRecipe('recipe1')">
+                <img src="https://i.pinimg.com/736x/8c/04/05/8c04054333e97024fb88cc0d726246f3.jpg" alt="Салат Оливье">
+                <h2>Салат Оливье</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe2')">
+                <img src="https://avatars.mds.yandex.net/i?id=af6b200e8dcdf6324ff4e4807a325a2e_l-5042173-images-thumbs&n=13" alt="Греческий салат">
+                <h2>Греческий салат</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe3')">
+                <img src="https://avatars.mds.yandex.net/i?id=d0d948aff3eb9d3a19096d663fedebf0_l-12938349-images-thumbs&n=13" alt="Цезарь">
+                <h2>Цезарь</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe4')">
+                <img src="https://avatars.mds.yandex.net/i?id=24fbb72cc5e440a45485b06071f210e9_l-10809483-images-thumbs&n=13" alt="Винегрет">
+                <h2>Винегрет</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe5')">
+                <img src="https://avatars.mds.yandex.net/i?id=9f366d32584041ce2bc89b2efc78c2e8_l-12325159-images-thumbs&n=13" alt="Селёдка под шубой">
+                <h2>Селёдка под шубой</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe6')">
+                <img src="https://shuba.life/static/content/thumbs/1905x884/9/02/jyzukx---c1905x884x50px50p-up--4c5d08ee323f11cd8f73cff5f71d2029.jpg" alt="Панцанелла">
+                <h2>Панцанелла</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe7')">
+                <img src="https://avatars.mds.yandex.net/i?id=368f2dca214ae4efcdf9427445f8d9c7_l-5657629-images-thumbs&n=13" alt="Весенний салат">
+                <h2>Весенний салат</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe8')">
+                <img src="https://massel.com/wp-content/uploads/2013/11/shutterstock_67925098-scaled.jpg" alt="Салат с морепродуктами">
+                <h2>Салат с морепродуктами</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe9')">
+                <img src="https://avatars.mds.yandex.net/get-znatoki/1548967/2a0000017f9a7ade8bf1c85770b4e03bce0c/orig" alt="Салат с авокадо">
+                <h2>Салат с авокадо</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe10')">
+                <img src="https://i.pinimg.com/originals/50/bc/40/50bc4024a0468716890c4ac5eab511b5.jpg" alt="Салат с курицей и авокадо">
+                <h2>Салат с курицей и авокадо</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe11')">
+                <img src="https://i.pinimg.com/originals/6f/e1/16/6fe116f1254a877f6f146c8b705f4322.jpg" alt="Салат из тунца">
+                <h2>Салат из тунца</h2>
+            </div>
+            <div class="recipe-card" onclick="openRecipe('recipe12')">
+                <img src="https://avatars.mds.yandex.net/i?id=8ce8b784bcccae1ed8073a86cc2bf7d1_l-9065925-images-thumbs&n=13" alt="Салат с киноа">
+                <h2>Салат с киноа</h2>
+            </div> 
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRecipe()">&times;</span>
+            <div id="recipe-details"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div id="contents" class="social-buttons">
+            <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
+                <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://vk.com/jullii_a" class="social-btn vk">
+                <ion-icon name="logo-vk"></ion-icon>
+            </a>
+        </div>
+        <ul class="menu_footer">
+            <li><a href="index.html">Домой</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <address>Волоколамское шоссе, д. 17, офис 392</address>
+        <p>©2024 Book Recipe | All Rights Reserved</p>
+      </footer>
+      <!--Готовые иконки из библиотеки ionicons-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Получаем все ссылки внутри контейнера
+        const links = document.querySelectorAll('#contents a');
+        // Добавляем обработчик событий на каждую ссылку
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Останавливаем переход по ссылке
+
+                const userConfirmed = confirm("Вы точно хотите покинуть страницу?");
+                if (userConfirmed) {
+                    // Если пользователь подтвердил, переходим по ссылке
+                    window.location.href = this.href;
+                }
+            });
+        });
+
+        const recipes = {
+            recipe1: {
+                title: "Салат Оливье",
+                steps: [
+                    "Отварите картофель, морковь и яйца. Остудите.",
+                    "Нарежьте все ингредиенты кубиками, включая огурцы и колбасу.",
+                    "Добавьте зелёный горошек и заправьте майонезом. Перемешайте."
+                ]
+            },
+            recipe2: {
+                title: "Греческий салат",
+                steps: [
+                    "Нарежьте крупными кусками помидоры, огурцы, и болгарский перец.",
+                    "Добавьте нарезанный красный лук и оливки.",
+                    "Посыпьте кубиками феты и заправьте оливковым маслом."
+                ]
+            },
+            recipe3: {
+                title: "Цезарь",
+                steps: [
+                    "Нарежьте листья салата и выложите в глубокую миску.",
+                    "Добавьте обжаренные куриные кусочки и крутоны.",
+                    "Полейте соусом Цезарь и посыпьте тёртым пармезаном."
+                ]
+            },
+            recipe4: {
+                title: "Винегрет",
+                steps: [
+                    "Отварите свёклу, морковь и картофель. Остудите и нарежьте кубиками.",
+                    "Добавьте квашеную капусту, зелёный горошек и мелко нарезанный лук.",
+                    "Заправьте растительным маслом и перемешайте."
+                ]
+            },
+            recipe5: {
+                title: "Селёдка под шубой",
+                steps: [
+                    "Отварите картофель, морковь и свёклу. Очистите и натрите.",
+                    "Выложите слоями картофель, селёдку, лук, морковь и свёклу.",
+                    "Каждый слой промажьте майонезом."
+                ]
+            },
+            recipe6: {
+                title: "Панцанелла",
+                steps: [
+                    "Нарежьте крупно черствый хлеб и поджарьте его.",
+                    "Добавьте помидоры, огурцы, лук и базилик.",
+                    "Заправьте оливковым маслом с уксусом и перемешайте."
+                ]
+            },
+            recipe7: {
+                title: "Весенний салат",
+                steps: [
+                    "Нарежьте свежие огурцы, редис и зелень.",
+                    "Добавьте листья салата.",
+                    "Заправьте сметаной или йогуртом.",
+                    "Посолите и перемешайте перед подачей."
+                ]
+            },
+            recipe8: {
+                title: "Салат с морепродуктами",
+                steps: [
+                    "Отварите креветки и кальмары, нарежьте кольцами.",
+                    "Добавьте салатный микс, авокадо и черри.",
+                    "Заправьте оливковым маслом с лимонным соком.",
+                    "Посыпьте семенами кунжута перед подачей."
+                ]
+            },
+            recipe9: {
+                title: "Салат с авокадо",
+                steps: [
+                    "Нарежьте авокадо, помидоры и огурцы.",
+                    "Добавьте листья салата и красный лук.",
+                    "Заправьте оливковым маслом и лимонным соком. Посолите и поперчите."
+                ]
+            },
+            recipe10: {
+                title: "Салат с курицей и авокадо",
+                steps: [
+                    "Отварите куриное филе, остудите и нарежьте его полосками.",
+                    "Нарежьте авокадо, помидоры и огурцы.",
+                    "Добавьте листья салата и красный лук.",
+                    "Заправьте оливковым маслом, лимонным соком и солью по вкусу."
+                ]
+            },
+            recipe11: {
+                title: "Салат из тунца",
+                steps: [
+                    "Слейте жидкость с консервированного тунца и разомните его вилкой.",
+                    "Добавьте нарезанный огурец, помидоры и красный лук.",
+                    "Заправьте майонезом, перемешайте и посолите по вкусу."
+                ]
+            },
+            recipe12: {
+                title: "Салат с киноа",
+                steps: [
+                    "Отварите киноа по инструкции на упаковке.",
+                    "Нарежьте авокадо, огурцы и помидоры.",
+                    "Смешайте киноа с овощами и заправьте оливковым маслом и лимонным соком."
+                ]
+            }
+        };
+
+        function openRecipe(recipeId) {
+            const recipe = recipes[recipeId];
+            const modal = document.getElementById('recipe-modal');
+            const recipeDetails = document.getElementById('recipe-details');
+            if (recipe) {
+                recipeDetails.innerHTML = `
+                    <h2>${recipe.title}</h2>
+                    <ol>
+                        ${recipe.steps.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                `;
+                modal.style.display = 'flex';
+            }
+        }
+        function closeRecipe() {
+            const modal = document.getElementById('recipe-modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

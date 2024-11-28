@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Устанавливаем кодировку символов -->
+    <meta charset="UTF-8" />
+    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Прописываем заголовок страницы -->
+    <title>Горячее</title>
+    <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Подключаем файл со стилями -->
+    <link rel="stylesheet" href="stylemainmeal.css" />
+    <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
+  </head>
+<body>
+    <!-- Десктоп версия -->
+    <div class="desktop">
+        <header>
+            <a class="logo" href="index.html">Book Recipe</a>
+            <nav class="menu">
+                <a href="soup.html">Супы</a>
+                <a href="mainmeal.html">Горячее</a>
+                <a href="salad.html">Салаты</a>
+                <a href="bakery.html">Выпечка</a>
+                <a href="dessert.html">Десерты</a>
+                <a href="log.html">Вход</a>
+            </nav>
+        </header>
+    </div>
+    <!-- Мобильная версия -->
+    <div class="mobile">
+        <header>
+            <div class="logo">Book Recipe</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="mobile-menu">
+                <a href="soup.html">Супы</a>
+                <a href="mainmeal.html">Горячее</a>
+                <a href="salad.html">Салаты</a>
+                <a href="bakery.html">Выпечка</a>
+                <a href="dessert.html">Десерты</a>
+                <a href="log.html">Регистрация</a>
+                <label for="menu-toggle" class="close-icon">&times;</label>
+            </nav>
+        </header>
+    </div>
+
+    <main class="fade-in">
+        <section class="recipe-section">
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/1582279/pub_5dd6ab65bbabdf0a2baed657_5dd6aeedf7b0f702d253eac0/scale_1200" alt="Бефстроганов">
+                </div>
+                <div class="recipe-content">
+                    <h2>Бефстроганов</h2>
+                    <p>Классическое русское блюдо из нежной говядины в сметанном соусе.</p>
+                    <button onclick="viewRecipe('beef-stroganoff')">Посмотреть рецепт</button>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=1f5e12714336a99c0e673740c7eacae9_l-12814755-images-thumbs&n=13" alt="Плов">
+                </div>
+                <div class="recipe-content">
+                    <h2>Плов</h2>
+                    <p>Ароматный плов с нежным мясом и специями из восточной кухни.</p>
+                    <button onclick="viewRecipe('pilaf')">Посмотреть рецепт</button>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=f2433c68d5bb2ec8b3d80dd880578902_l-10036219-images-thumbs&n=13" alt="Куриные котлеты">
+                </div>
+                <div class="recipe-content">
+                    <h2>Куриные котлеты</h2>
+                    <p>Нежные и сочные котлеты из куриного фарша, обжаренные до золотистой корочки.</p>
+                    <button onclick="viewRecipe('chicken-cutlets')">Посмотреть рецепт</button>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://pic.rutubelist.ru/video/f7/c4/f7c4627ee8fb4c45c458db9c24736337.jpg" alt="Макароны по-флотски">
+                </div>
+                <div class="recipe-content">
+                    <h2>Макароны по-флотски</h2>
+                    <p>Простое и вкусное блюдо с обжаренным мясным фаршем и макаронами.</p>
+                    <button onclick="viewRecipe('navy-pasta')">Посмотреть рецепт</button>
+                </div>
+            </article>
+        
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://gotovim-doma.ru/images/recipe/4/84/484dd52c9c6354a94f0dc14344671809.jpg" alt="Зразы с яйцом">
+                </div>
+                <div class="recipe-content">
+                    <h2>Зразы с яйцом</h2>
+                    <p>Картофельные котлеты с начинкой из варёного яйца и зелени.</p>
+                    <button onclick="viewRecipe('zrazy-with-egg')">Посмотреть рецепт</button>
+                </div>
+            </article>
+        
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=a018f2549f9070838dc781dc55a9f99c_l-5296855-images-thumbs&n=13" alt="Лазанья">
+                </div>
+                <div class="recipe-content">
+                    <h2>Лазанья</h2>
+                    <p>Слоёное итальянское блюдо с соусом бешамель и мясной начинкой.</p>
+                    <button onclick="viewRecipe('lasagna')">Посмотреть рецепт</button>
+                </div>
+            </article>
+        
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://posudapskov.ru/wa-data/public/shop/products/52/02/252/images/12282/12282.970.jpg" alt="Жаркое">
+                </div>
+                <div class="recipe-content">
+                    <h2>Жаркое</h2>
+                    <p>Ароматное мясо с овощами, запечённое в горшочках.</p>
+                    <button onclick="viewRecipe('roast')">Посмотреть рецепт</button>
+                </div>
+            </article>
+        
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://img.inmyroom.ru/inmyroom/thumb/1880x1200/jpg:60/uploads/food_post/teaser/40/4035/jpg_2000_40352b8f-7bef-4382-9c0e-62b5e4b68a73.jpg?sign=3f46fcce948b704d607456281235167cf2dcb00cf027416d6d80b17213c56c41" alt="Голубцы">
+                </div>
+                <div class="recipe-content">
+                    <h2>Голубцы</h2>
+                    <p>Капустные листья, фаршированные мясом и рисом, в томатном соусе.</p>
+                    <button onclick="viewRecipe('cabbage-rolls')">Посмотреть рецепт</button>
+                </div>
+            </article>
+        
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=be669f8bfeb66b9bdf495fdf6c047e17_l-3689591-images-thumbs&n=13" alt="Рагу с мясом">
+                </div>
+                <div class="recipe-content">
+                    <h2>Рагу с мясом</h2>
+                    <p>Тушёное мясо с картофелем, морковью и специями.</p>
+                    <button onclick="viewRecipe('meat-ragu')">Посмотреть рецепт</button>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=a4fe890c58bc84f6ea991a518e48f031_l-4577377-images-thumbs&n=13" alt="Фаршированные перцы">
+                </div>
+                <div class="recipe-content">
+                    <h2>Фаршированные перцы</h2>
+                    <p>Сладкие перцы, начинённые мясом и рисом, тушённые в ароматном соусе.</p>
+                    <button onclick="viewRecipe('stuffed-peppers')">Посмотреть рецепт</button>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=1295f413b9c676dc090bfad8cccecd7e_l-8959338-images-thumbs&n=13" alt="Гуляш">
+                </div>
+                <div class="recipe-content">
+                    <h2>Гуляш</h2>
+                    <p>Тушёное мясо с луком и морковью в густом соусе с ароматными специями.</p>
+                    <button onclick="viewRecipe('goulash')">Посмотреть рецепт</button>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/1704699/pub_629b25edf14c8f297bcc9dbf_629b35a38a91c709634cc50c/scale_1200" alt="Пастуший пирог">
+                </div>
+                <div class="recipe-content">
+                    <h2>Пастуший пирог</h2>
+                    <p>Сытное блюдо с фаршем и картофельным пюре, запечённое до золотистой корочки.</p>
+                    <button onclick="viewRecipe('shepherds-pie')">Посмотреть рецепт</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRecipe()">&times;</span>
+            <div id="recipe-details"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div id="contents" class="social-buttons">
+            <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
+                <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://vk.com/jullii_a" class="social-btn vk">
+                <ion-icon name="logo-vk"></ion-icon>
+            </a>
+        </div>
+        <ul class="menu_footer">
+            <li><a href="index.html">Домой</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <address>Волоколамское шоссе, д. 17, офис 392</address>
+        <p>©2024 Book Recipe | All Rights Reserved</p>
+      </footer>
+      <!--Готовые иконки из библиотеки ionicons-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Получаем все ссылки внутри контейнера
+        const links = document.querySelectorAll('#contents a');
+        // Добавляем обработчик событий на каждую ссылку
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Останавливаем переход по ссылке
+
+                const userConfirmed = confirm("Вы точно хотите покинуть страницу?");
+                if (userConfirmed) {
+                    // Если пользователь подтвердил, переходим по ссылке
+                    window.location.href = this.href;
+                }
+            });
+        });
+
+        const recipes = {
+            'beef-stroganoff': {
+                title: "Бефстроганов",
+                steps: [
+                    "Нарежьте говядину тонкими полосками.",
+                    "Обжарьте мясо на сильном огне до румяной корочки.",
+                    "Добавьте нарезанный лук и обжарьте до прозрачности.",
+                    "Влейте сметану и немного бульона, тушите до готовности. Подавайте с картофельным пюре."
+                ]
+            },
+            'pilaf': {
+                title: "Плов",
+                steps: [
+                    "Нарежьте мясо кубиками и обжарьте до румяной корочки.",
+                    "Добавьте нарезанный лук, морковь и специи, обжаривайте 10 минут.",
+                    "Засыпьте рис, добавьте воду и тушите под крышкой на слабом огне до готовности."
+                ]
+            },
+            'chicken-cutlets': {
+                title: "Куриные котлеты",
+                steps: [
+                    "Смешайте куриный фарш с яйцом, хлебом, замоченным в молоке, солью и специями.",
+                    "Сформируйте котлеты и обваляйте их в панировочных сухарях.",
+                    "Обжарьте на сковороде до золотистой корочки, затем доведите до готовности в духовке."
+                ]
+            },
+            'navy-pasta': {
+                title: "Макароны по-флотски",
+                steps: [
+                    "Отварите макароны до готовности.",
+                    "Обжарьте лук, добавьте фарш и жарьте до готовности.",
+                    "Смешайте макароны с фаршем, подавайте горячими."
+                ]
+            },
+            'zrazy-with-egg': {
+                title: "Зразы с яйцом",
+                steps: [
+                    "Приготовьте картофельное пюре и сформируйте лепёшки.",
+                    "Начините каждую лепёшку нарезанным яйцом и зеленью.",
+                    "Обжарьте зразы на сковороде до румяной корочки."
+                ]
+            },
+            'lasagna': {
+                title: "Лазанья",
+                steps: [
+                    "Обжарьте фарш с луком и чесноком, добавьте томатный соус и тушите.",
+                    "Приготовьте соус бешамель (растопите масло, добавьте муку и молоко, доведите до загустения).",
+                    "В форму для запекания выложите слои: листы лазаньи, мясной соус, бешамель, сыр.",
+                    "Повторите слои и запекайте в духовке при 180°C около 40 минут."
+                ]
+            },
+            'roast': {
+                title: "Жаркое",
+                steps: [
+                    "Нарежьте мясо кусочками, обжарьте до румяной корочки.",
+                    "Добавьте нарезанные картофель, морковь и лук.",
+                    "Залейте всё бульоном, добавьте специи и тушите на слабом огне до готовности."
+                ]
+            },
+            'cabbage-rolls': {
+                title: "Голубцы",
+                steps: [
+                    "Отварите капустные листья до мягкости.",
+                    "Смешайте фарш с рисом, луком и специями, заверните в листья капусты.",
+                    "Выложите голубцы в кастрюлю, залейте томатным соусом и тушите на слабом огне около часа."
+                ]
+            },
+            'meat-ragu': {
+                title: "Рагу с мясом",
+                steps: [
+                    "Нарежьте мясо кубиками и обжарьте до румяной корочки.",
+                    "Добавьте нарезанные картофель, морковь, лук и чеснок.",
+                    "Залейте всё водой или бульоном, добавьте специи и тушите на слабом огне до готовности."
+                ]
+            },
+            'stuffed-peppers': {
+                title: "Фаршированные перцы",
+                steps: [
+                    "Срежьте верхушки сладких перцев, удалите семена.",
+                    "Смешайте фарш с рисом, нарезанным луком и специями.",
+                    "Начините перцы фаршем, выложите в кастрюлю и залейте томатным соусом.",
+                    "Тушите под крышкой на слабом огне около 40 минут."
+                ]
+            },
+            'goulash': {
+                title: "Гуляш",
+                steps: [
+                    "Нарежьте мясо кубиками и обжарьте до золотистой корочки.",
+                    "Добавьте нарезанный лук, морковь и немного томатной пасты, тушите несколько минут.",
+                    "Влейте воду или бульон, добавьте специи и тушите на медленном огне до мягкости мяса.",
+                    "Подавайте с гарниром, например, картофельным пюре или макаронами."
+                ]
+            },
+            'shepherds-pie': {
+                title: "Пастуший пирог",
+                steps: [
+                    "Обжарьте фарш с луком, чесноком и морковью, добавьте томатную пасту и немного бульона, тушите до загустения.",
+                    "Приготовьте картофельное пюре с добавлением сливочного масла и молока.",
+                    "Выложите фарш в форму для запекания, сверху распределите картофельное пюре.",
+                    "Запекайте в духовке при 180°C около 20 минут до золотистой корочки."
+                ]
+            }
+        };
+
+        function viewRecipe(recipeId) {
+            const recipe = recipes[recipeId];
+            const modal = document.getElementById('recipe-modal');
+            const recipeDetails = document.getElementById('recipe-details');
+
+            if (recipe) {
+                recipeDetails.innerHTML = `
+                    <h2>${recipe.title}</h2>
+                    <ol>
+                        ${recipe.steps.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                `;
+                modal.style.display = 'flex';
+            }
+        }
+        function closeRecipe() {
+            const modal = document.getElementById('recipe-modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

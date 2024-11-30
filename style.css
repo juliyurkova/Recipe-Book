@@ -799,6 +799,8 @@ address {
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 .bakery-section h2 {
     padding-bottom: 20px;

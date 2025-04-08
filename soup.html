@@ -1,58 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <!-- Устанавливаем кодировку символов -->
+<html lang="en">
+
+<head>
+    <!-- Set character encoding -->
     <meta charset="UTF-8" />
-    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+    <!-- Add settings for page responsiveness on various devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Прописываем заголовок страницы -->
-    <title>Супы</title>
+    <!-- Set page title -->
+    <title>Soups</title>
     <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-    />
+        rel="stylesheet" />
     <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <!-- Подключаем файл со стилями -->
     <link rel="stylesheet" href="stylesaladsoup.css" />
     <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
-  </head>
+</head>
+
 <body>
-    <!-- Десктоп версия -->
+    <!-- Desktop version -->
     <div class="desktop">
         <header>
             <a class="logo" href="index.html">Book Recipe</a>
             <nav class="menu">
-                <a href="soup.html">Супы</a>
-                <a href="mainmeal.html">Горячее</a>
-                <a href="salad.html">Салаты</a>
-                <a href="bakery.html">Выпечка</a>
-                <a href="dessert.html">Десерты</a>
-                <a href="log.html">Вход</a>
+                <a href="soup.html">Soups</a>
+                <a href="mainmeal.html">Main Dishes</a>
+                <a href="salad.html">Salads</a>
+                <a href="bakery.html">Bakery</a>
+                <a href="dessert.html">Desserts</a>
+                <a href="log.html">Login</a>
             </nav>
         </header>
     </div>
 
-    <!-- Мобильная версия -->
+    <!-- Mobile version -->
     <div class="mobile">
         <header>
             <div class="logo">Book Recipe</div>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <nav class="mobile-menu">
-                <a href="soup.html">Супы</a>
-                <a href="mainmeal.html">Горячее</a>
-                <a href="salad.html">Салаты</a>
-                <a href="bakery.html">Выпечка</a>
-                <a href="dessert.html">Десерты</a>
-                <a href="log.html">Регистрация</a>
+                <a href="soup.html">Soups</a>
+                <a href="mainmeal.html">Main Dishes</a>
+                <a href="salad.html">Salads</a>
+                <a href="bakery.html">Bakery</a>
+                <a href="dessert.html">Desserts</a>
+                <a href="log.html">Register</a>
                 <label for="menu-toggle" class="close-icon">&times;</label>
             </nav>
         </header>
@@ -60,57 +58,68 @@
 
     <main class="fade-in">
         <div class="recipe-card" onclick="openRecipe('recipe1')">
-            <img src="https://cdn.fishki.net/upload/users/2023/11/10/1235978/21b481e9d997a38fa66487fcb69a26f3.jpg" alt="Борщ">
-            <h2>Борщ</h2>
+            <img src="https://cdn.fishki.net/upload/users/2023/11/10/1235978/21b481e9d997a38fa66487fcb69a26f3.jpg"
+                alt="Borscht">
+            <h2>Borscht</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe2')">
-            <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65959f37c767be610df96621_65959f4ac767be610df9834d/scale_1200" alt="Харчо">
-            <h2>Суп Харчо</h2>
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65959f37c767be610df96621_65959f4ac767be610df9834d/scale_1200"
+                alt="Kharcho">
+            <h2>Kharcho Soup</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe3')">
-            <img src="https://avatars.mds.yandex.net/i?id=42d8e48c30b274e13d1657094fd84d08_l-5376007-images-thumbs&n=13" alt="Куриный суп с лапшой">
-            <h2>Куриный суп с лапшой</h2>
+            <img src="https://avatars.mds.yandex.net/i?id=42d8e48c30b274e13d1657094fd84d08_l-5376007-images-thumbs&n=13"
+                alt="Chicken Noodle Soup">
+            <h2>Chicken Noodle Soup</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe4')">
-            <img src="https://i.pinimg.com/originals/6c/0e/fe/6c0efead75ba771a27983390a84e6a0e.jpg" alt="Гороховый суп">
-            <h2>Гороховый суп</h2>
+            <img src="https://i.pinimg.com/originals/6c/0e/fe/6c0efead75ba771a27983390a84e6a0e.jpg" alt="Pea Soup">
+            <h2>Pea Soup</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe5')">
-            <img src="https://avatars.mds.yandex.net/i?id=95e458aaad124c4d0a98b33bf5c78a03_l-5334643-images-thumbs&n=13" alt="Солянка">
-            <h2>Солянка</h2>
+            <img src="https://avatars.mds.yandex.net/i?id=95e458aaad124c4d0a98b33bf5c78a03_l-5334643-images-thumbs&n=13"
+                alt="Solyanka">
+            <h2>Solyanka</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe6')">
-            <img src="https://avatars.mds.yandex.net/i?id=60a1869112323afd8b643bc2cac330bd_l-9227708-images-thumbs&n=13" alt="Щи">
-            <h2>Щи</h2>
+            <img src="https://avatars.mds.yandex.net/i?id=60a1869112323afd8b643bc2cac330bd_l-9227708-images-thumbs&n=13"
+                alt="Shchi">
+            <h2>Shchi</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe7')">
-            <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/05/fish-soup-fire-e1559077730852.jpg" alt="Уха">
-            <h2>Уха</h2>
+            <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/05/fish-soup-fire-e1559077730852.jpg"
+                alt="Ukha">
+            <h2>Ukha</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe8')">
-            <img src="https://avatars.mds.yandex.net/i?id=10339d80a83a4ecf79e44d84fe361e022586b751-5467261-images-thumbs&n=13" alt="Сырный суп с грибами">
-            <h2>Сырный суп с грибами</h2>
+            <img src="https://avatars.mds.yandex.net/i?id=10339d80a83a4ecf79e44d84fe361e022586b751-5467261-images-thumbs&n=13"
+                alt="Cheese Soup with Mushrooms">
+            <h2>Cheese Soup with Mushrooms</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe9')">
-            <img src="https://avatars.dzeninfra.ru/get-zen_doc/4365012/pub_6165ceb7bd00b551daac237c_6165cecac0bc24471dfdbbfd/scale_1200" alt="Мисо-суп">
-            <h2>Мисо-суп</h2>
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/4365012/pub_6165ceb7bd00b551daac237c_6165cecac0bc24471dfdbbfd/scale_1200"
+                alt="Miso Soup">
+            <h2>Miso Soup</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe10')">
-            <img src="https://avatars.mds.yandex.net/i?id=5255a9144a0759a8f77974d65f755074_l-5661819-images-thumbs&n=13" alt="Том Ям">
-            <h2>Том Ям</h2>
+            <img src="https://avatars.mds.yandex.net/i?id=5255a9144a0759a8f77974d65f755074_l-5661819-images-thumbs&n=13"
+                alt="Tom Yum">
+            <h2>Tom Yum</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe11')">
-            <img src="https://avatars.mds.yandex.net/i?id=5348bc4ba9ab0e1191703cfd67f3c9f2_l-5313598-images-thumbs&n=13" alt="Суп Минестроне">
-            <h2>Суп Минестроне</h2>
+            <img src="https://avatars.mds.yandex.net/i?id=5348bc4ba9ab0e1191703cfd67f3c9f2_l-5313598-images-thumbs&n=13"
+                alt="Minestrone Soup">
+            <h2>Minestrone Soup</h2>
         </div>
         <div class="recipe-card" onclick="openRecipe('recipe12')">
-            <img src="https://img.restoclub.ru/uploads/newsinner/1/2/e/1/12e1ee1cec792fcad0aac60d4d9f6c43_w1200_h630--c.jpeg" alt="Тыквенный суп">
-            <h2>Тыквенный суп</h2>
-        </div>        
+            <img src="https://img.restoclub.ru/uploads/newsinner/1/2/e/1/12e1ee1cec792fcad0aac60d4d9f6c43_w1200_h630--c.jpeg"
+                alt="Pumpkin Soup">
+            <h2>Pumpkin Soup</h2>
+        </div>
     </main>
-    
 
-    <!-- Модальное окно -->
+
+    <!-- Modal window -->
     <div id="recipe-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeRecipe()">&times;</span>
@@ -131,28 +140,28 @@
             </a>
         </div>
         <ul class="menu_footer">
-            <li><a href="index.html">Домой</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contacts</a></li>
         </ul>
-        <address>Волоколамское шоссе, д. 17, офис 392</address>
+        <address>Volokolamskoe Highway, 17, Office 392</address>
         <p>©2024 Book Recipe | All Rights Reserved</p>
-      </footer>
-      <!--Готовые иконки из библиотеки ionicons-->
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
+    <!--Готовые иконки из библиотеки ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        // Получаем все ссылки внутри контейнера
+        // Get all links inside the container
         const links = document.querySelectorAll('#contents a');
-        // Добавляем обработчик событий на каждую ссылку
+        // Add event handler to each link
         links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Останавливаем переход по ссылке
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Stop link navigation
 
-                const userConfirmed = confirm("Вы точно хотите покинуть страницу?");
+                const userConfirmed = confirm("Are you sure you want to leave the page?");
                 if (userConfirmed) {
-                    // Если пользователь подтвердил, переходим по ссылке
+                    // If user confirmed, navigate to the link
                     window.location.href = this.href;
                 }
             });
@@ -160,111 +169,112 @@
 
         const recipes = {
             recipe1: {
-                title: "Борщ",
+                title: "Borscht",
                 steps: [
-                    "Отварите мясо для бульона, добавьте лавровый лист и специи.",
-                    "Очистите и нарежьте свеклу, морковь и лук. Обжарьте их на растительном масле.",
-                    "Добавьте в бульон картофель и капусту, варите до мягкости.",
-                    "Положите зажарку в бульон, доведите до готовности. Подавайте со сметаной и зеленью."
+                    "Boil meat for broth, add bay leaf and spices.",
+                    "Peel and chop beets, carrots, and onions. Sauté them in vegetable oil.",
+                    "Add potatoes and cabbage to the broth, cook until tender.",
+                    "Add the sautéed vegetables to the broth, bring to readiness. Serve with sour cream and herbs."
                 ]
             },
             recipe2: {
-                title: "Суп Харчо",
+                title: "Kharcho Soup",
                 steps: [
-                    "Сварите говяжий бульон, добавьте лавровый лист и черный перец горошком.",
-                    "Обжарьте лук и морковь, добавьте томатную пасту и немного воды.",
-                    "Добавьте в бульон рис и обжаренные овощи. Варите до готовности.",
-                    "Приправьте чесноком, хмели-сунели и кинзой. Подавайте горячим."
+                    "Cook beef broth, add bay leaf and black peppercorns.",
+                    "Sauté onions and carrots, add tomato paste and a little water.",
+                    "Add rice and sautéed vegetables to the broth. Cook until done.",
+                    "Season with garlic, khmeli-suneli, and cilantro. Serve hot."
                 ]
             },
             recipe3: {
-                title: "Куриный суп с лапшой",
+                title: "Chicken Noodle Soup",
                 steps: [
-                    "Отварите курицу, добавив в воду лавровый лист и перец горошком.",
-                    "Достаньте курицу, отделите мясо от костей и верните мясо в бульон.",
-                    "Добавьте нарезанный картофель, варите до мягкости.",
-                    "Положите в суп домашнюю лапшу и мелко нарезанную морковь. Варите еще 5 минут.",
-                    "Посыпьте свежей зеленью перед подачей."
+                    "Boil chicken, adding bay leaf and peppercorns to the water.",
+                    "Remove chicken, separate meat from bones and return meat to broth.",
+                    "Add chopped potatoes, cook until tender.",
+                    "Add homemade noodles and finely chopped carrots to the soup. Cook for another 5 minutes.",
+                    "Sprinkle with fresh herbs before serving."
                 ]
             },
             recipe4: {
-                title: "Гороховый суп",
+                title: "Pea Soup",
                 steps: [
-                    "Замочите горох в воде на несколько часов или на ночь.",
-                    "Сварите горох до мягкости, добавив копчености (например, ребрышки).",
-                    "Обжарьте лук и морковь, добавьте в суп.",
-                    "Добавьте картофель и варите до готовности. Подавайте с сухариками."
+                    "Soak peas in water for several hours or overnight.",
+                    "Cook peas until tender, adding smoked meats (e.g., ribs).",
+                    "Sauté onions and carrots, add to soup.",
+                    "Add potatoes and cook until done. Serve with croutons."
                 ]
             },
             recipe5: {
-                title: "Солянка",
+                title: "Solyanka",
                 steps: [
-                    "Сварите бульон из говядины или курицы.",
-                    "Обжарьте лук с томатной пастой, добавьте мелко нарезанные соленые огурцы.",
-                    "Добавьте в бульон мясные продукты: колбасу, ветчину, сосиски.",
-                    "Приправьте лимонным соком, оливками и лавровым листом. Подавайте с долькой лимона."
+                    "Cook broth from beef or chicken.",
+                    "Sauté onions with tomato paste, add finely chopped pickles.",
+                    "Add meat products to broth: sausage, ham, frankfurters.",
+                    "Season with lemon juice, olives, and bay leaf. Serve with a lemon wedge."
                 ]
             },
             recipe6: {
-                title: "Щи из свежей капусты",
+                title: "Fresh Cabbage Shchi",
                 steps: [
-                    "Сварите мясной бульон, добавьте лавровый лист и перец горошком.",
-                    "Нашинкуйте капусту и добавьте в бульон.",
-                    "Обжарьте лук и морковь, добавьте томатную пасту и тушите.",
-                    "Положите в суп картофель, а затем добавьте зажарку. Варите до готовности.",
-                    "Подавайте со сметаной и зеленью."
+                    "Cook meat broth, add bay leaf and peppercorns.",
+                    "Shred cabbage and add to broth.",
+                    "Sauté onions and carrots, add tomato paste and simmer.",
+                    "Add potatoes to soup, then add sautéed vegetables. Cook until done.",
+                    "Serve with sour cream and herbs."
                 ]
             },
             recipe7: {
-                title: "Уха",
+                title: "Ukha",
                 steps: [
-                    "Очистите рыбу (судак, щука или другая). Сварите бульон из голов и хвостов.",
-                    "Добавьте в бульон картофель, нарезанный крупными кусками.",
-                    "Положите морковь и лук целиком, затем добавьте куски рыбы.",
-                    "Приправьте лавровым листом, перцем и зеленью. Варите до готовности.",
-                    "Подавайте горячей с кусочком лимона."
+                    "Clean fish (pike-perch, pike, or other). Cook broth from heads and tails.",
+                    "Add potatoes cut into large pieces to broth.",
+                    "Add whole carrots and onions, then add fish pieces.",
+                    "Season with bay leaf, pepper, and herbs. Cook until done.",
+                    "Serve hot with a lemon wedge."
                 ]
             },
             recipe8: {
-                title: "Сырный суп с грибами",
+                title: "Cheese Soup with Mushrooms",
                 steps: [
-                    "Обжарьте нарезанные шампиньоны на сливочном масле.",
-                    "Сварите бульон, добавьте картофель и варите до мягкости.",
-                    "Положите плавленый сыр в суп, помешивайте, пока он полностью не растворится.",
-                    "Добавьте обжаренные грибы и варите еще 5 минут.",
-                    "Приправьте солью и перцем. Подавайте с зеленью и гренками."
+                    "Sauté sliced mushrooms in butter.",
+                    "Cook broth, add potatoes and cook until tender.",
+                    "Add processed cheese to soup, stir until completely dissolved.",
+                    "Add sautéed mushrooms and cook for another 5 minutes.",
+                    "Season with salt and pepper. Serve with herbs and croutons."
                 ]
             },
             recipe9: {
-                title: "Мисо-суп",
+                title: "Miso Soup",
                 steps: [
-                    "Нагрейте воду, добавьте мисо-пасту и тщательно размешайте.",
-                    "Добавьте тофу, нарезанный кубиками, и водоросли вакаме.",
-                    "Варите 5 минут, затем добавьте зеленый лук. Подавайте горячим."
+                    "Heat water, add miso paste and stir thoroughly.",
+                    "Add tofu cut into cubes and wakame seaweed.",
+                    "Cook for 5 minutes, then add green onions. Serve hot."
                 ]
             },
             recipe10: {
-                title: "Том Ям",
+                title: "Tom Yum",
                 steps: [
-                    "Вскипятите воду с пастой Том Ям и кокосовым молоком.",
-                    "Добавьте грибы, креветки и помидоры черри.",
-                    "Приправьте лаймовым соком, рыбным соусом и сахаром. Украсьте кинзой перед подачей."
+                    "Bring water to boil with Tom Yum paste and coconut milk.",
+                    "Add mushrooms, shrimp, and cherry tomatoes.",
+                    "Season with lime juice, fish sauce, and sugar. Garnish with cilantro before serving."
                 ]
             },
             recipe11: {
-                title: "Суп Минестроне",
+                title: "Minestrone Soup",
                 steps: [
-                    "Обжарьте лук, морковь и сельдерей на оливковом масле.",
-                    "Добавьте нарезанные помидоры и овощной бульон.",
-                    "Положите фасоль, кабачки, макароны и зелень. Варите до готовности."
+                    "Cook onions, carrots, and celery in olive oil.",
+                    "Add tomato paste and cook for a few minutes.",
+                    "Add vegetable broth and bring to a boil.",
+                    "Add beans, pasta, and spinach. Cook until pasta is tender."
                 ]
             },
             recipe12: {
-                title: "Тыквенный суп",
+                title: "Pumpkin Soup",
                 steps: [
-                    "Обжарьте лук и чеснок на сливочном масле.",
-                    "Добавьте тыкву, нарезанную кубиками, и залейте овощным бульоном.",
-                    "Сварите до мягкости, измельчите блендером. Добавьте сливки и специи. Подавайте с сухариками."
+                    "Sauté onions and garlic in butter.",
+                    "Add pumpkin and vegetable broth. Cook until tender.",
+                    "Blend with a hand blender. Add cream and spices."
                 ]
             }
         };
@@ -291,4 +301,5 @@
         }
     </script>
 </body>
+
 </html>

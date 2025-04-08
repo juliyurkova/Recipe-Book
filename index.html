@@ -1,184 +1,210 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <!-- Устанавливаем кодировку символов -->
-    <meta charset="UTF-8" />
-    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Прописываем заголовок страницы -->
-    <title>Книга рецептов</title>
-    <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-    />
-    <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <!-- Подключаем файл со стилями -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
-  </head>
-  <body>
-    <!-- Десктоп версия -->
-    <div class="desktop">
-        <header>
-            <a class="logo" href="index.html">Book Recipe</a>
-            <nav class="menu">
-                <a href="soup.html">Супы</a>
-                <a href="mainmeal.html">Горячее</a>
-                <a href="salad.html">Салаты</a>
-                <a href="bakery.html">Выпечка</a>
-                <a href="dessert.html">Десерты</a>
-                <a href="log.html">Вход</a>
-            </nav>
-        </header>
-    </div>
-    <!-- Мобильная версия -->
-    <div class="mobile">
-        <header>
-            <div class="logo">Book Recipe</div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <nav class="mobile-menu">
-                <a href="soup.html">Супы</a>
-                <a href="mainmeal.html">Горячее</a>
-                <a href="salad.html">Салаты</a>
-                <a href="bakery.html">Выпечка</a>
-                <a href="dessert.html">Десерты</a>
-                <a href="log.html">Регистрация</a>
-                <label for="menu-toggle" class="close-icon">&times;</label>
-            </nav>
-        </header>
-    </div>
+<html lang="en">
 
-    <div class="notification-container">
-      <div class="bell-icon" onclick="toggleNotifications()">
-          🔔
-          <div id="notification-counter">0</div> <!-- Счётчик уведомлений -->
-      </div>
-      <div class="notification-list">
-          <ul id="notification-list">
-              <!-- Уведомления будут добавляться сюда -->
-          </ul>
-      </div>
-    </div>
+<head>
+  <!-- Set character encoding -->
+  <meta charset="UTF-8" />
+  <!-- Add settings for page responsiveness on various devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Set page title -->
+  <title>Recipe Book</title>
+  <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <!-- Подключаем файл со стилями -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
+</head>
 
-    <header class="fhead">
-      <h1>Книга рецептов</h1>
+<body>
+  <!-- Desktop version -->
+  <div class="desktop">
+    <header>
+      <a class="logo" href="index.html">Book Recipe</a>
+      <nav class="menu">
+        <a href="soup.html">Soups</a>
+        <a href="mainmeal.html">Main Dishes</a>
+        <a href="salad.html">Salads</a>
+        <a href="bakery.html">Bakery</a>
+        <a href="dessert.html">Desserts</a>
+        <a href="log.html">Login</a>
+      </nav>
     </header>
-    
-    <div class="row">
-        <div class="side">
-          <h2>А вы знали, что...</h2>
-          <div class="card-container">
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/13/86/f2/1386f25964997a780f4e3eb64db54600.jpg" alt="Карточка 1">
-                <div class="info">
-                    <h3>Сыр</h3>
-                    <p>признан самой желанной едой для воров во всем мире. Его крадут из магазинов чаще всего.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/originals/1b/7f/14/1b7f14c1022931ad22433796a8c6af7b.jpg" alt="Карточка 2">
-                <div class="info">
-                    <h3>Бананы,</h3>
-                    <p>как и арбузы, на самом деле ягоды. А вот клубника - нет! Это цветоложе. И про банан: банановое растение — это гигантская трава, а бананы — ее ягоды.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/originals/9d/3b/94/9d3b94daa9b516259dfffad95357040a.jpg" alt="Карточка 3">
-                <div class="info">
-                    <h3>Сэндвич</h3>
-                    <p>был изобретен человеком по имени Эрл Сэндвич. Он был заядлым игроком в покер и отказывался вставать из-за игрального стола ради еды.</p>
-                </div>
-            </div>
-            <div class="card">
-              <img src="https://avatars.dzeninfra.ru/get-zen_doc/57035/pub_64d220d66d9e594d742577ab_64d6abfaa14ed76cfb04c667/scale_1200" alt="Карточка 4">
-              <div class="info">
-                  <h3>Из арахисового масла</h3>
-                  <p>можно делать не только бутерброды и снеки, но и бриллианты!</p>
-              </div>
-            </div>
-            <a href="fact.html"><button class="button button5">Узнать больше интересных фактов</button></a>
+  </div>
+  <!-- Mobile version -->
+  <div class="mobile">
+    <header>
+      <div class="logo">Book Recipe</div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="mobile-menu">
+        <a href="soup.html">Soups</a>
+        <a href="mainmeal.html">Main Dishes</a>
+        <a href="salad.html">Salads</a>
+        <a href="bakery.html">Bakery</a>
+        <a href="dessert.html">Desserts</a>
+        <a href="log.html">Register</a>
+        <label for="menu-toggle" class="close-icon">&times;</label>
+      </nav>
+    </header>
+  </div>
+
+  <div class="notification-container">
+    <div class="bell-icon" onclick="toggleNotifications()">
+      🔔
+      <div id="notification-counter">0</div> <!-- Notification counter -->
+    </div>
+    <div class="notification-list">
+      <ul id="notification-list">
+        <!-- Notifications will be added here -->
+      </ul>
+    </div>
+  </div>
+
+  <header class="fhead">
+    <h1>Recipe Book</h1>
+  </header>
+
+  <div class="row">
+    <div class="side">
+      <h2>Did you know that...</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/13/86/f2/1386f25964997a780f4e3eb64db54600.jpg" alt="Card 1">
+          <div class="info">
+            <h3>Cheese</h3>
+            <p>is recognized as the most desired food for thieves worldwide. It is the most frequently stolen item from
+              stores.</p>
           </div>
         </div>
-        <div class="main">
-            <ul class="gallery_ul">
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pasteques%2C_extrait_d%27un_tableau_de_Giovanni_Stanchi.jpeg/1600px-Pasteques%2C_extrait_d%27un_tableau_de_Giovanni_Stanchi.jpeg" alt="A Toyota Previa covered in graffiti" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Floris_Claesz._van_Dyck_001.jpg" alt="Interesting living room light through a window" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://artchive.ru/res/media/img/oy800/work/e3f/252245.jpg" alt="Sara on a red bike" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Carracci_-_Der_Bohnenesser.jpeg/1438px-Carracci_-_Der_Bohnenesser.jpeg" alt="XOXO venue in between talks" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://i.pinimg.com/originals/91/37/72/9137729318af4d995fb70f0b4302ab5d.jpg" alt="Trees lit by green light during dusk" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://i.pinimg.com/originals/d6/4c/fd/d64cfdd38175152b54aa840839e8728a.jpg" alt="Portrait of Justin Pervorse" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://avatars.mds.yandex.net/i?id=571e57d5edf6489774df8be7b750140b_l-5231941-images-thumbs&n=13" alt="Empty bike racks outside a hotel" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://www.artwall.ru/files/products/poster_p-92176.jpg" alt="Heavy rain on an intersection" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://avatars.dzeninfra.ru/get-zen_doc/4337106/pub_60a906a8d750f6113a63e611_60a90879ba5f7856865dcbc9/scale_1200" alt="Payam Rajabi eating peanut chicken" loading="lazy">
-                </li>
-                <li class="gallery_li">
-                  <img class="img-gallery" src="https://avatars.dzeninfra.ru/get-zen_doc/3472554/pub_61df207a03267516a23d6a1d_61df241d946d9f632f59120c/scale_1200" alt="Portland skyline sunset" loading="lazy">
-                </li>
-                <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
-                <li class="gallery_li"></li>
-            </ul>
+        <div class="card">
+          <img src="https://i.pinimg.com/originals/1b/7f/14/1b7f14c1022931ad22433796a8c6af7b.jpg" alt="Card 2">
+          <div class="info">
+            <h3>Bananas,</h3>
+            <p>like watermelons, are actually berries. But strawberries are not! They are receptacles. And about
+              bananas: the banana plant is a giant herb, and bananas are its berries.</p>
+          </div>
         </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/originals/9d/3b/94/9d3b94daa9b516259dfffad95357040a.jpg" alt="Card 3">
+          <div class="info">
+            <h3>Sandwich</h3>
+            <p>was invented by a man named Earl of Sandwich. He was an avid poker player and refused to leave the gaming
+              table for meals.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://avatars.dzeninfra.ru/get-zen_doc/57035/pub_64d220d66d9e594d742577ab_64d6abfaa14ed76cfb04c667/scale_1200"
+            alt="Card 4">
+          <div class="info">
+            <h3>Peanut Butter</h3>
+            <p>can be used not only for sandwiches and snacks but also for making diamonds!</p>
+          </div>
+        </div>
+        <a href="fact.html"><button class="button button5">Discover More Interesting Facts</button></a>
+      </div>
     </div>
+    <div class="main">
+      <ul class="gallery_ul">
+        <li class="gallery_li">
+          <img class="img-gallery"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pasteques%2C_extrait_d%27un_tableau_de_Giovanni_Stanchi.jpeg/1600px-Pasteques%2C_extrait_d%27un_tableau_de_Giovanni_Stanchi.jpeg"
+            alt="A Toyota Previa covered in graffiti" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Floris_Claesz._van_Dyck_001.jpg"
+            alt="Interesting living room light through a window" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery" src="https://artchive.ru/res/media/img/oy800/work/e3f/252245.jpg"
+            alt="Sara on a red bike" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Carracci_-_Der_Bohnenesser.jpeg/1438px-Carracci_-_Der_Bohnenesser.jpeg"
+            alt="XOXO venue in between talks" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery" src="https://i.pinimg.com/originals/91/37/72/9137729318af4d995fb70f0b4302ab5d.jpg"
+            alt="Trees lit by green light during dusk" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery" src="https://i.pinimg.com/originals/d6/4c/fd/d64cfdd38175152b54aa840839e8728a.jpg"
+            alt="Portrait of Justin Pervorse" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery"
+            src="https://avatars.mds.yandex.net/i?id=571e57d5edf6489774df8be7b750140b_l-5231941-images-thumbs&n=13"
+            alt="Empty bike racks outside a hotel" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery" src="https://www.artwall.ru/files/products/poster_p-92176.jpg"
+            alt="Heavy rain on an intersection" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery"
+            src="https://avatars.dzeninfra.ru/get-zen_doc/4337106/pub_60a906a8d750f6113a63e611_60a90879ba5f7856865dcbc9/scale_1200"
+            alt="Payam Rajabi eating peanut chicken" loading="lazy">
+        </li>
+        <li class="gallery_li">
+          <img class="img-gallery"
+            src="https://avatars.dzeninfra.ru/get-zen_doc/3472554/pub_61df207a03267516a23d6a1d_61df241d946d9f632f59120c/scale_1200"
+            alt="Portland skyline sunset" loading="lazy">
+        </li>
+        <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
+        <li class="gallery_li"></li>
+      </ul>
+    </div>
+  </div>
 
-    <main>
-      <section class="content">
-          <div class="box A"><iframe src="https://rutube.ru/play/embed/8d2aa9d14117ae10656329438a40505d/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-          <div class="box B"><iframe src="https://rutube.ru/play/embed/ab17f1144d93a9d3eebaaebd7f8ff9eb/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-          <div class="box C"><iframe src="https://rutube.ru/play/embed/3161c38862ffa3d9c5b93180f18db2be/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-          <div class="box D"><iframe src="https://rutube.ru/play/embed/2d55dfe8c11028e93b69bbc8715d42f8/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-          <div class="box E"><iframe src="https://rutube.ru/play/embed/73aa31077b885e4f6b6388ef11cca019/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      </section>
+  <main>
+    <section class="content">
+      <div class="box A"><iframe src="https://rutube.ru/play/embed/8d2aa9d14117ae10656329438a40505d/" frameBorder="0"
+          allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      <div class="box B"><iframe src="https://rutube.ru/play/embed/ab17f1144d93a9d3eebaaebd7f8ff9eb/" frameBorder="0"
+          allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      <div class="box C"><iframe src="https://rutube.ru/play/embed/3161c38862ffa3d9c5b93180f18db2be/" frameBorder="0"
+          allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      <div class="box D"><iframe src="https://rutube.ru/play/embed/2d55dfe8c11028e93b69bbc8715d42f8/" frameBorder="0"
+          allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      <div class="box E"><iframe src="https://rutube.ru/play/embed/73aa31077b885e4f6b6388ef11cca019/" frameBorder="0"
+          allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+    </section>
   </main>
 
-    <footer class="footer">
-      <div id="contents" class="social-buttons">
-          <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
-              <ion-icon name="logo-pinterest"></ion-icon>
-          </a>
-          <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
-              <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-          <a href="https://vk.com/jullii_a" class="social-btn vk">
-              <ion-icon name="logo-vk"></ion-icon>
-          </a>
-      </div>
-      <ul class="menu_footer">
-          <li><a href="index.html">Домой</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Контакты</a></li>
-      </ul>
-      <address>Волоколамское шоссе, д. 17, офис 392</address>
-      <p>©2024 Book Recipe | All Rights Reserved</p>
-    </footer>
-    <!--Готовые иконки из библиотеки ionicons-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!--ПОДКЛЮЧЕНИЕ JS-->
-    <script src="script.js"></script>
-  </body>
+  <footer class="footer">
+    <div id="contents" class="social-buttons">
+      <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
+        <ion-icon name="logo-pinterest"></ion-icon>
+      </a>
+      <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+      <a href="https://vk.com/jullii_a" class="social-btn vk">
+        <ion-icon name="logo-vk"></ion-icon>
+      </a>
+    </div>
+    <ul class="menu_footer">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+    <address>Volokolamskoe Highway, 17, Office 392</address>
+    <p>©2024 Book Recipe | All Rights Reserved</p>
+  </footer>
+  <!--Готовые иконки из библиотеки ionicons-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!--ПОДКЛЮЧЕНИЕ JS-->
+  <script src="script.js"></script>
+</body>
+
+</html>

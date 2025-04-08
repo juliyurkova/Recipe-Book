@@ -1,57 +1,55 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <!-- Устанавливаем кодировку символов -->
+<html lang="en">
+
+<head>
+    <!-- Set character encoding -->
     <meta charset="UTF-8" />
-    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+    <!-- Add settings for page responsiveness on various devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Прописываем заголовок страницы -->
-    <title>Десерты</title>
+    <!-- Set page title -->
+    <title>Desserts</title>
     <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-    />
+        rel="stylesheet" />
     <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <!-- Подключаем файл со стилями -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
-  </head>
+</head>
+
 <body>
-    <!-- Десктоп версия -->
+    <!-- Desktop version -->
     <div class="desktop">
         <header>
             <a class="logo" href="index.html">Book Recipe</a>
             <nav class="menu">
-                <a href="soup.html">Супы</a>
-                <a href="mainmeal.html">Горячее</a>
-                <a href="salad.html">Салаты</a>
-                <a href="bakery.html">Выпечка</a>
-                <a href="dessert.html">Десерты</a>
-                <a href="log.html">Вход</a>
+                <a href="soup.html">Soups</a>
+                <a href="mainmeal.html">Main Dishes</a>
+                <a href="salad.html">Salads</a>
+                <a href="bakery.html">Bakery</a>
+                <a href="dessert.html">Desserts</a>
+                <a href="log.html">Login</a>
             </nav>
         </header>
     </div>
-    <!-- Мобильная версия -->
+    <!-- Mobile version -->
     <div class="mobile">
         <header>
             <div class="logo">Book Recipe</div>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <nav class="mobile-menu">
-                <a href="soup.html">Супы</a>
-                <a href="mainmeal.html">Горячее</a>
-                <a href="salad.html">Салаты</a>
-                <a href="bakery.html">Выпечка</a>
-                <a href="dessert.html">Десерты</a>
-                <a href="log.html">Регистрация</a>
+                <a href="soup.html">Soups</a>
+                <a href="mainmeal.html">Main Dishes</a>
+                <a href="salad.html">Salads</a>
+                <a href="bakery.html">Bakery</a>
+                <a href="dessert.html">Desserts</a>
+                <a href="log.html">Register</a>
                 <label for="menu-toggle" class="close-icon">&times;</label>
             </nav>
         </header>
@@ -59,231 +57,218 @@
 
     <main>
         <section class="bakery-section">
-            <h2>Популярные рецепты</h2>
+            <h2>Popular Recipes</h2>
             <div class="bakery-recipe-grid fade-in">
                 <div class="bakery-recipe">
-                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_663d8fa92b38817cbb93722e_663d9150f9a9cf0ab3f71be8/scale_1200" alt="Шоколадные маффины">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_663d8fa92b38817cbb93722e_663d9150f9a9cf0ab3f71be8/scale_1200"
+                        alt="Chocolate Muffins">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Шоколадные маффины</h3>
-                        <p class="bakery-recipe-description">Ароматные маффины с насыщенным шоколадным вкусом.</p>
+                        <h3 class="bakery-recipe-title">Chocolate Muffins</h3>
+                        <p class="bakery-recipe-description">Fragrant muffins with rich chocolate flavor.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>200 г муки</li>
-                                <li>100 г сахара</li>
-                                <li>2 яйца</li>
-                                <li>100 мл молока</li>
-                                <li>50 г какао</li>
-                                <li>1 ч. л. разрыхлителя</li>
-                                <li>50 г шоколадных капель</li>
+                                <li>200g flour</li>
+                                <li>100g sugar</li>
+                                <li>2 eggs</li>
+                                <li>100ml milk</li>
+                                <li>50g cocoa powder</li>
+                                <li>1 tsp baking powder</li>
+                                <li>50g chocolate chips</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Смешайте муку, сахар, какао и разрыхлитель.</li>
-                                <li>Добавьте яйца, молоко и шоколадные капли.</li>
-                                <li>Выложите тесто в формы и выпекайте 20 минут при 180°C.</li>
+                                <li>Mix flour, sugar, cocoa powder, and baking powder.</li>
+                                <li>Add eggs, milk, and chocolate chips.</li>
+                                <li>Pour the batter into molds and bake for 20 minutes at 180°C.</li>
                             </ol>
                         </div>
                     </div>
-                </div>      
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://avatars.mds.yandex.net/i?id=38fb440be12c4721077792ce499b901b_l-5233191-images-thumbs&n=13" alt="Яблочный пирог">
+                    <img src="https://avatars.mds.yandex.net/i?id=38fb440be12c4721077792ce499b901b_l-5233191-images-thumbs&n=13"
+                        alt="Apple Pie">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Яблочный пирог</h3>
-                        <p class="bakery-recipe-description">Классический пирог с сочной яблочной начинкой.</p>
+                        <h3 class="bakery-recipe-title">Apple Pie</h3>
+                        <p class="bakery-recipe-description">Classic pie with juicy apple filling.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>300 г муки</li>
-                                <li>150 г масла</li>
-                                <li>100 г сахара</li>
-                                <li>2 яйца</li>
-                                <li>500 г яблок</li>
-                                <li>1 ч. л. корицы</li>
+                                <li>300g flour</li>
+                                <li>150g butter</li>
+                                <li>100g sugar</li>
+                                <li>2 eggs</li>
+                                <li>500g apples</li>
+                                <li>1 tsp cinnamon</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Приготовьте тесто из муки, масла, сахара и яиц.</li>
-                                <li>Выложите слой теста в форму, добавьте нарезанные яблоки с корицей.</li>
-                                <li>Закройте начинку слоем теста и выпекайте 40 минут при 180°C.</li>
+                                <li>Prepare dough from flour, butter, sugar, and eggs.</li>
+                                <li>Place a layer of dough in the pan, add sliced apples with cinnamon.</li>
+                                <li>Cover the filling with another layer of dough and bake for 40 minutes at 180°C.</li>
                             </ol>
                         </div>
                     </div>
-                </div>        
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://avatars.mds.yandex.net/i?id=abcc944cae0681ac8c5263b7bb3d199d_l-7710221-images-thumbs&n=13" alt="Чизкейк">
+                    <img src="https://avatars.mds.yandex.net/i?id=abcc944cae0681ac8c5263b7bb3d199d_l-7710221-images-thumbs&n=13"
+                        alt="Cheesecake">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Чизкейк</h3>
-                        <p class="bakery-recipe-description">Воздушный чизкейк с нежным кремом.</p>
+                        <h3 class="bakery-recipe-title">Cheesecake</h3>
+                        <p class="bakery-recipe-description">Fluffy cheesecake with delicate cream.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>200 г печенья</li>
-                                <li>100 г масла</li>
-                                <li>400 г сливочного сыра</li>
-                                <li>150 г сахара</li>
-                                <li>3 яйца</li>
-                                <li>100 мл сливок</li>
+                                <li>200g cookies</li>
+                                <li>100g butter</li>
+                                <li>400g cream cheese</li>
+                                <li>150g sugar</li>
+                                <li>3 eggs</li>
+                                <li>100ml cream</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Измельчите печенье и смешайте с маслом, выложите в форму.</li>
-                                <li>Смешайте сыр, сахар, яйца и сливки, вылейте на основу.</li>
-                                <li>Выпекайте 50 минут при 160°C.</li>
+                                <li>Crush cookies and mix with butter, press into the pan.</li>
+                                <li>Mix cheese, sugar, eggs, and cream, pour over the crust.</li>
+                                <li>Bake for 50 minutes at 160°C.</li>
                             </ol>
                         </div>
                     </div>
-                </div>          
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/3930378/pub_603a26d449b4e728906d9bce_603a26fb82fc21754d5334ff/scale_1200" alt="Банановый хлеб">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/3930378/pub_603a26d449b4e728906d9bce_603a26fb82fc21754d5334ff/scale_1200"
+                        alt="Banana Bread">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Банановый хлеб</h3>
-                        <p class="bakery-recipe-description">Мягкий хлеб с ароматом спелых бананов.</p>
+                        <h3 class="bakery-recipe-title">Banana Bread</h3>
+                        <p class="bakery-recipe-description">Soft bread with the aroma of ripe bananas.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>3 спелых банана</li>
-                                <li>200 г муки</li>
-                                <li>100 г сахара</li>
-                                <li>2 яйца</li>
-                                <li>50 г масла</li>
-                                <li>1 ч. л. разрыхлителя</li>
+                                <li>3 ripe bananas</li>
+                                <li>200g flour</li>
+                                <li>100g sugar</li>
+                                <li>2 eggs</li>
+                                <li>50g butter</li>
+                                <li>1 tsp baking powder</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Разомните бананы, добавьте сахар, яйца и масло.</li>
-                                <li>Смешайте с мукой и разрыхлителем, выложите в форму.</li>
-                                <li>Выпекайте 50 минут при 180°C.</li>
+                                <li>Mash bananas, add sugar, eggs, and butter.</li>
+                                <li>Mix with flour and baking powder, pour into the pan.</li>
+                                <li>Bake for 50 minutes at 180°C.</li>
                             </ol>
                         </div>
                     </div>
-                </div>          
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://www.reviewjournal.com/wp-content/uploads/2019/10/12883302_web1_web23550017_10156469523059057_8550242545351263610_o.jpg" alt="Синабон">
+                    <img src="https://www.reviewjournal.com/wp-content/uploads/2019/10/12883302_web1_web23550017_10156469523059057_8550242545351263610_o.jpg"
+                        alt="Cinnamon Rolls">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Синабон (Булочки с корицей)</h3>
-                        <p class="bakery-recipe-description">Мягкие булочки с ароматной корицей и сливочной глазурью.</p>
+                        <h3 class="bakery-recipe-title">Cinnamon Rolls</h3>
+                        <p class="bakery-recipe-description">Soft rolls with aromatic cinnamon and cream cheese glaze.
+                        </p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>500 г муки</li>
-                                <li>250 мл молока</li>
-                                <li>100 г сахара</li>
-                                <li>2 яйца</li>
-                                <li>50 г масла</li>
-                                <li>1 ч. л. сухих дрожжей</li>
-                                <li>2 ст. л. корицы</li>
-                                <li>100 г сахара для начинки</li>
-                                <li>100 г сливочного сыра для глазури</li>
+                                <li>500g flour</li>
+                                <li>250ml milk</li>
+                                <li>100g sugar</li>
+                                <li>2 eggs</li>
+                                <li>50g butter</li>
+                                <li>1 tsp dry yeast</li>
+                                <li>2 tbsp cinnamon</li>
+                                <li>100g sugar for filling</li>
+                                <li>100g cream cheese for glaze</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Замесите тесто из муки, молока, сахара, яиц и дрожжей. Дайте ему подняться.</li>
-                                <li>Раскатайте тесто, смажьте маслом, посыпьте корицей и сахаром, сверните рулетом и нарежьте.</li>
-                                <li>Выпекайте 25 минут при 180°C, смажьте глазурью из сливочного сыра.</li>
+                                <li>Knead dough from flour, milk, sugar, eggs, and yeast. Let it rise.</li>
+                                <li>Roll out the dough, spread with butter, sprinkle with cinnamon and sugar, roll up
+                                    and slice.</li>
+                                <li>Bake for 25 minutes at 180°C, top with cream cheese glaze.</li>
                             </ol>
                         </div>
                     </div>
-                </div>          
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://avatars.mds.yandex.net/i?id=3a0b72d0af03093e5881a063651a77a4_l-9211711-images-thumbs&n=13" alt="Пирог с черникой">
+                    <img src="https://avatars.mds.yandex.net/i?id=3a0b72d0af03093e5881a063651a77a4_l-9211711-images-thumbs&n=13"
+                        alt="Blueberry Pie">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Пирог с черникой</h3>
-                        <p class="bakery-recipe-description">Ароматный ягодный пирог с нежной начинкой.</p>
+                        <h3 class="bakery-recipe-title">Blueberry Pie</h3>
+                        <p class="bakery-recipe-description">Fragrant berry pie with delicate filling.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>300 г муки</li>
-                                <li>150 г масла</li>
-                                <li>100 г сахара</li>
-                                <li>2 яйца</li>
-                                <li>400 г черники</li>
-                                <li>2 ст. л. крахмала</li>
-                                <li>1 ч. л. ванилина</li>
+                                <li>300g flour</li>
+                                <li>150g butter</li>
+                                <li>100g sugar</li>
+                                <li>2 eggs</li>
+                                <li>400g blueberries</li>
+                                <li>2 tbsp starch</li>
+                                <li>1 tsp vanilla extract</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Приготовьте тесто из муки, масла, сахара и яиц.</li>
-                                <li>Раскатайте тесто, выложите в форму и добавьте чернику, смешанную с крахмалом и ванилином.</li>
-                                <li>Выпекайте 30 минут при 180°C.</li>
+                                <li>Prepare dough from flour, butter, sugar, and eggs.</li>
+                                <li>Roll out the dough, place in the pan, and add blueberries mixed with starch and
+                                    vanilla.</li>
+                                <li>Bake for 30 minutes at 180°C.</li>
                             </ol>
                         </div>
                     </div>
-                </div>             
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://i3.wp.com/www.hibiny.ru/images/news/2024/318738/939057b3ac2f9c69fd7f6c5daaa0e334.jpg?ssl=1" alt="Медовик">
+                    <img src="https://i3.wp.com/www.hibiny.ru/images/news/2024/318738/939057b3ac2f9c69fd7f6c5daaa0e334.jpg?ssl=1"
+                        alt="Honey Cake">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Медовик</h3>
-                        <p class="bakery-recipe-description">Слоёный торт с нежным медовым вкусом.</p>
+                        <h3 class="bakery-recipe-title">Honey Cake</h3>
+                        <p class="bakery-recipe-description">Layered cake with delicate honey flavor.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>3 ст. л. меда</li>
-                                <li>150 г сахара</li>
-                                <li>2 яйца</li>
-                                <li>400 г муки</li>
-                                <li>1 ч. л. соды</li>
-                                <li>500 г сметаны</li>
-                                <li>200 г сахара для крема</li>
+                                <li>3 tbsp honey</li>
+                                <li>150g sugar</li>
+                                <li>2 eggs</li>
+                                <li>400g flour</li>
+                                <li>1 tsp baking soda</li>
+                                <li>500g sour cream</li>
+                                <li>200g sugar for cream</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Растопите мед, добавьте сахар, яйца и соду, затем вмешайте муку.</li>
-                                <li>Испеките коржи (около 7-8 шт.) при 180°C.</li>
-                                <li>Смешайте сметану с сахаром, прослоите коржи кремом и оставьте на ночь.</li>
+                                <li>Melt honey, add sugar, eggs, and baking soda, then mix in flour.</li>
+                                <li>Bake cake layers (about 7-8 pieces) at 180°C.</li>
+                                <li>Mix sour cream with sugar, layer the cake layers with cream, and refrigerate
+                                    overnight.</li>
                             </ol>
                         </div>
                     </div>
-                </div>             
+                </div>
                 <div class="bakery-recipe">
-                    <img src="https://static.wixstatic.com/media/e1d252_7217c31141544177a818ec9a01ffd554.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/e1d252_7217c31141544177a818ec9a01ffd554.jpg" alt="Лимонный кекс">
+                    <img src="https://static.wixstatic.com/media/e1d252_7217c31141544177a818ec9a01ffd554.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/e1d252_7217c31141544177a818ec9a01ffd554.jpg"
+                        alt="Lemon Cake">
                     <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Лимонный кекс</h3>
-                        <p class="bakery-recipe-description">Цитрусовый кекс с ярким вкусом лимона.</p>
+                        <h3 class="bakery-recipe-title">Lemon Cake</h3>
+                        <p class="bakery-recipe-description">Citrus cake with bright lemon flavor.</p>
                         <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
+                            <strong>Ingredients:</strong>
                             <ul>
-                                <li>200 г муки</li>
-                                <li>150 г сахара</li>
-                                <li>3 яйца</li>
-                                <li>100 г масла</li>
-                                <li>1 лимон (цедра и сок)</li>
-                                <li>1 ч. л. разрыхлителя</li>
+                                <li>200g flour</li>
+                                <li>150g sugar</li>
+                                <li>3 eggs</li>
+                                <li>100g butter</li>
+                                <li>1 lemon (zest and juice)</li>
                             </ul>
-                            <strong>Шаги:</strong>
+                            <strong>Steps:</strong>
                             <ol>
-                                <li>Взбейте яйца с сахаром, добавьте масло, цедру и сок лимона.</li>
-                                <li>Смешайте с мукой и разрыхлителем, выложите в форму.</li>
-                                <li>Выпекайте 40 минут при 180°C.</li>
+                                <li>Mix flour, sugar, eggs, and butter.</li>
+                                <li>Add lemon zest and juice.</li>
+                                <li>Bake for 40 minutes at 180°C.</li>
                             </ol>
                         </div>
                     </div>
-                </div>               
-                <div class="bakery-recipe">
-                    <img src="https://avatars.mds.yandex.net/i?id=d33cde4b71b86b0a4f610a06d6c09175_l-4825098-images-thumbs&n=13" alt="Клубничный торт">
-                    <div class="bakery-recipe-content">
-                        <h3 class="bakery-recipe-title">Клубничный торт</h3>
-                        <p class="bakery-recipe-description">Сладкий бисквитный торт с клубничным кремом.</p>
-                        <div class="bakery-recipe-details">
-                            <strong>Ингредиенты:</strong>
-                            <ul>
-                                <li>4 яйца</li>
-                                <li>150 г сахара</li>
-                                <li>150 г муки</li>
-                                <li>500 г клубники</li>
-                                <li>300 мл сливок</li>
-                                <li>50 г сахарной пудры</li>
-                            </ul>
-                            <strong>Шаги:</strong>
-                            <ol>
-                                <li>Взбейте яйца с сахаром, добавьте муку и испеките бисквит.</li>
-                                <li>Взбейте сливки с сахарной пудрой, добавьте нарезанную клубнику.</li>
-                                <li>Разрежьте бисквит на слои, прослоите кремом, украсьте ягодами.</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>                
-                
+                </div>
+            </div>
         </section>
     </main>
 
@@ -300,31 +285,32 @@
             </a>
         </div>
         <ul class="menu_footer">
-            <li><a href="index.html">Домой</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contacts</a></li>
         </ul>
-        <address>Волоколамское шоссе, д. 17, офис 392</address>
+        <address>Volokolamskoe Highway, 17, Office 392</address>
         <p>©2024 Book Recipe | All Rights Reserved</p>
-      </footer>
-      <!--Готовые иконки из библиотеки ionicons-->
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      <script>
-        // Получаем все ссылки внутри контейнера
+    </footer>
+    <!--Ready-made icons from the ionicons library-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Get all links inside the container
         const links = document.querySelectorAll('#contents a');
-        // Добавляем обработчик событий на каждую ссылку
+        // Add event handler to each link
         links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Останавливаем переход по ссылке
-    
-                const userConfirmed = confirm("Вы точно хотите покинуть страницу?");
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Stop link navigation
+
+                const userConfirmed = confirm("Are you sure you want to leave the page?");
                 if (userConfirmed) {
-                    // Если пользователь подтвердил, переходим по ссылке
+                    // If user confirmed, navigate to the link
                     window.location.href = this.href;
                 }
             });
         });
     </script>
 </body>
+
 </html>

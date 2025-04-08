@@ -1,161 +1,160 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <!-- Устанавливаем кодировку символов -->
+<html lang="en">
+
+<head>
+    <!-- Set character encoding -->
     <meta charset="UTF-8" />
-    <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+    <!-- Add settings for page responsiveness on various devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Прописываем заголовок страницы -->
-    <title>Регистрация</title>
+    <!-- Set page title -->
+    <title>Registration</title>
     <!-- Подключаем через Google Fonts шрифт Poppins. Ссылка для выбора шрифта: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-    />
+        rel="stylesheet" />
     <!-- Подключаем нормализацию стилей для единообразного отображения страницы в разных браузерах.-->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <!-- Подключаем файл со стилями -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/41Zhzg6V0vL._AC_UL960_QL65_.png">
-  </head>
-    <body>
-        <!-- Десктоп версия -->
-        <div class="desktop">
-            <header>
-                <a class="logo" href="index.html">Book Recipe</a>
-                <nav class="menu">
-                    <a href="soup.html">Супы</a>
-                    <a href="mainmeal.html">Горячее</a>
-                    <a href="salad.html">Салаты</a>
-                    <a href="bakery.html">Выпечка</a>
-                    <a href="dessert.html">Десерты</a>
-                    <a href="log.html">Вход</a>
-                </nav>
-            </header>
+</head>
+
+<body>
+    <!-- Desktop version -->
+    <div class="desktop">
+        <header>
+            <a class="logo" href="index.html">Book Recipe</a>
+            <nav class="menu">
+                <a href="soup.html">Soups</a>
+                <a href="mainmeal.html">Main Dishes</a>
+                <a href="salad.html">Salads</a>
+                <a href="bakery.html">Bakery</a>
+                <a href="dessert.html">Desserts</a>
+                <a href="log.html">Login</a>
+            </nav>
+        </header>
+    </div>
+    <!-- Mobile version -->
+    <div class="mobile">
+        <header>
+            <div class="logo">Book Recipe</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="mobile-menu">
+                <a href="soup.html">Soups</a>
+                <a href="mainmeal.html">Main Dishes</a>
+                <a href="salad.html">Salads</a>
+                <a href="bakery.html">Bakery</a>
+                <a href="dessert.html">Desserts</a>
+                <a href="log.html">Register</a>
+                <label for="menu-toggle" class="close-icon">&times;</label>
+            </nav>
+        </header>
+    </div>
+
+    <div class="form-container">
+        <!-- Block for animated squares -->
+        <div class="floating-squares">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
         </div>
-        <!-- Мобильная версия -->
-        <div class="mobile">
-            <header>
-                <div class="logo">Book Recipe</div>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">&#9776;</label>
-                <nav class="mobile-menu">
-                    <a href="soup.html">Супы</a>
-                    <a href="mainmeal.html">Горячее</a>
-                    <a href="salad.html">Салаты</a>
-                    <a href="bakery.html">Выпечка</a>
-                    <a href="dessert.html">Десерты</a>
-                    <a href="log.html">Регистрация</a>
-                    <label for="menu-toggle" class="close-icon">&times;</label>
-                </nav>
-            </header>
-        </div> 
-        
-        <div class="form-container">
-            <!-- Блок для анимированных квадратиков -->
-            <div class="floating-squares">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-            <div class="registration-form">
-                <form action="" method="get">
-                    <h2 id="Topic3">Регистрация:</h2>
-                    <fieldset>
-                        <legend>Личные данные</legend>
-                        <p>
-                            <label for="name">Введите имя:</label>
-                            <input type="text" name="name" id="name" placeholder="Имя" required>
-                        </p>
-                        <p>
-                            <label for="phone">Введите телефон:</label>
-                            <input type="tel" name="phone" id="phone" placeholder="89991111111" required>
-                        </p>
-                        <p>
-                            <label for="email">Введите почту:</label>
-                            <input type="email" name="email" id="email" placeholder="mygre@ema.il" required>
-                        </p>
-                        <p>
-                            <label for="password">Введите пароль:</label>
-                            <input type="password" name="password" id="password" placeholder="********" required>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Дополнительные данные</legend>
-                        <p>
-                            <label>Цель использования сайта:</label><br>
-                            <input type="checkbox" name="purpose" id="search_recipes" required>
-                            <label for="search_recipes">Поиск рецептов</label><br>
-                            <input type="checkbox" name="purpose" id="post_recipes" required>
-                            <label for="post_recipes">Выкладывать свои рецепты</label><br>
-                            <input type="checkbox" name="purpose" id="inspiration" required>
-                            <label for="inspiration">Поиск вдохновения</label><br>
-                            <input type="checkbox" name="purpose" id="blog" required>
-                            <label for="blog">Развивать свой блог</label>
-                        </p>
-                        <p>
-                            <label>Порекомендуете наш сайт друзьям?</label><br>
-                            <input type="radio" name="recommend" id="yes" value="yes" required>
-                            <label for="yes">Да</label><br>
-                            <input type="radio" name="recommend" id="no" value="no" required>
-                            <label for="no">Нет</label>
-                        </p>
-                        <p class="about">
-                            <label for="about">Пожелания по улучшению сайта:</label><br>
-                            <textarea class="abouttext" id="about" name="about" rows="7"></textarea>
-                        </p>
-                        <input class="about"type="submit" value="Отправить">
-                    </fieldset>
-                </form>
-            </div>
+        <div class="registration-form">
+            <form action="" method="get">
+                <h2 id="Topic3">Registration:</h2>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <p>
+                        <label for="name">Enter your name:</label>
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                    </p>
+                    <p>
+                        <label for="phone">Enter your phone number:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="89991111111" required>
+                    </p>
+                    <p>
+                        <label for="email">Enter your email:</label>
+                        <input type="email" name="email" id="email" placeholder="mygre@ema.il" required>
+                    </p>
+                    <p>
+                        <label for="password">Enter your password:</label>
+                        <input type="password" name="password" id="password" placeholder="********" required>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <p>
+                        <label>Purpose of using the site:</label><br>
+                        <input type="checkbox" name="purpose" id="search_recipes" required>
+                        <label for="search_recipes">Search for recipes</label><br>
+                        <input type="checkbox" name="purpose" id="post_recipes" required>
+                        <label for="post_recipes">Post your own recipes</label><br>
+                        <input type="checkbox" name="purpose" id="inspiration" required>
+                        <label for="inspiration">Find inspiration</label><br>
+                        <input type="checkbox" name="purpose" id="blog" required>
+                        <label for="blog">Develop your blog</label>
+                    </p>
+                    <p>
+                        <label>Would you recommend our site to friends?</label><br>
+                        <input type="radio" name="recommend" id="yes" value="yes" required>
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" name="recommend" id="no" value="no" required>
+                        <label for="no">No</label>
+                    </p>
+                    <p class="about">
+                        <label for="about">Suggestions for site improvement:</label><br>
+                        <textarea class="abouttext" id="about" name="about" rows="7"></textarea>
+                    </p>
+                    <input class="about" type="submit" value="Submit">
+                </fieldset>
+            </form>
         </div>
-        
-        <footer class="footer">
-            <div id="contents" class="social-buttons">
-                <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
-                    <ion-icon name="logo-pinterest"></ion-icon>
-                </a>
-                <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-                <a href="https://vk.com/jullii_a" class="social-btn vk">
-                    <ion-icon name="logo-vk"></ion-icon>
-                </a>
-            </div>
-            <ul class="menu_footer">
-                <li><a href="index.html">Домой</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-            <address>Волоколамское шоссе, д. 17, офис 392</address>
-            <p>©2024 Book Recipe | All Rights Reserved</p>
-        </footer>
-        <!--Готовые иконки из библиотеки ionicons-->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script>
-            // Получаем все ссылки внутри контейнера
-            const links = document.querySelectorAll('#contents a');
-            // Добавляем обработчик событий на каждую ссылку
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault(); // Останавливаем переход по ссылке
-        
-                    const userConfirmed = confirm("Вы точно хотите покинуть страницу?");
-                    if (userConfirmed) {
-                        // Если пользователь подтвердил, переходим по ссылке
-                        window.location.href = this.href;
-                    }
-                });
+    </div>
+
+    <footer class="footer">
+        <div id="contents" class="social-buttons">
+            <a href="https://ru.pinterest.com/julll_ii_a/" class="social-btn pinterest">
+                <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/@julll_ii_a" class="social-btn youtube">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://vk.com/jullii_a" class="social-btn vk">
+                <ion-icon name="logo-vk"></ion-icon>
+            </a>
+        </div>
+        <ul class="menu_footer">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <address>Volokolamskoe Highway, 17, Office 392</address>
+        <p>©2024 Book Recipe | All Rights Reserved</p>
+    </footer>
+    <!--Ready-made icons from the ionicons library-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Get all links inside the container
+        const links = document.querySelectorAll('#contents a');
+        // Add event handler to each link
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Stop link navigation
+
+                const userConfirmed = confirm("Are you sure you want to leave the page?");
+                if (userConfirmed) {
+                    // If user confirmed, navigate to the link
+                    window.location.href = this.href;
+                }
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
+
 </html>
